@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SABA ESP — German-Led ESP Field Services & Advanced VFD Repair</title>
+  <meta name="description" content="Germany-based senior-engineer-only ESP field services, diagnostics, and multi-OEM VFD repair for oil & gas operators worldwide." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SABA ESP — German-Led ESP Field Services & Advanced VFD Repair" />
+  <meta property="og:description" content="Senior-engineer-only ESP field services, diagnostics, and multi-OEM VFD repair with German engineering discipline and traceable decisions." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --surface:#0f1a2d;
+      --card:rgba(255,255,255,.04);
+      --muted:rgba(255,255,255,.78);
+      --muted2:rgba(255,255,255,.62);
+      --line:rgba(255,255,255,.12);
+
+      /* Brand colors (from logo) */
+      --brand:#0d4e7d;
+      --brand2:#1f6fa7;
+
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#fff;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 16px;border-radius:12px;
+      background:linear-gradient(90deg,var(--brand),var(--brand2));
+      color:#ffffff;text-decoration:none;font-weight:750;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow: 0 10px 30px rgba(13,78,125,.28);
+    }
+    .btn:hover{filter:brightness(1.03)}
+    .btn.secondary{
+      background:transparent;
+      color:#fff;box-shadow:none;
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .btn.secondary:hover{background:rgba(255,255,255,.06)}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(13,78,125,.14);
+      border:1px solid rgba(13,78,125,.35);
+      color:rgba(255,255,255,.82);
+      font-size:13px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;overflow:hidden;
+      padding:70px 0 36px;
+      border-bottom:1px solid var(--line);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.35) 0%, rgba(11,18,32,.88) 60%, var(--bg) 100%),
+        radial-gradient(1200px 600px at 20% 0%, rgba(125,211,252,.18) 0%, rgba(125,211,252,0) 55%),
+        url("assets/hero-oilfield.png") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.02);
+      transform:scale(1.02);
+    }
+    .hero .wrap{position:relative}
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;gap:14px;
+      padding:10px 0 34px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.2px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.16);
+      display:grid;place-items:center;
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover} 
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.16);
+      display:grid;place-items:center;
+    }
+    .nav{
+      display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .nav a{text-decoration:none;opacity:.92}
+    .nav a:hover{opacity:1;text-decoration:underline}
+    .heroGrid{
+      display:grid;grid-template-columns: 1.25fr .75fr;gap:22px;
+      align-items:stretch;
+    }
+    .h1{font-size:46px;line-height:1.05;margin:12px 0 10px}
+    .sub{font-size:18px;line-height:1.55;color:var(--muted);max-width:60ch}
+    .heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .heroCard{
+      background:rgba(15,26,45,.68);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      backdrop-filter: blur(10px);
+    }
+    .kpi{display:grid;gap:10px;margin-top:4px}
+    .kpi div{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--brand2);margin-top:7px;flex:0 0 auto}
+    .note{color:var(--muted2);font-size:13px;line-height:1.5;margin-top:10px}
+
+    /* SECTIONS */
+    section{padding:44px 0;border-bottom:1px solid var(--line)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    h2{margin:0 0 12px;font-size:26px}
+    h3{margin:0 0 10px;font-size:18px}
+    p{margin:0 0 10px;color:var(--muted);line-height:1.65}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .tagrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .split{
+      display:grid;grid-template-columns: 1fr .9fr;gap:18px;
+      align-items:start;
+    }
+    .callout{
+      border:1px solid rgba(251,191,36,.22);
+      background:rgba(251,191,36,.08);
+      border-radius:16px;
+      padding:14px 14px;
+      color:rgba(255,255,255,.86);
+    }
+    .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .muted{color:var(--muted2)}
+    .small{font-size:13px;color:var(--muted2)}
+
+    /* CONTACT */
+    .contact{
+      padding:52px 0 70px;border-bottom:none;
+    }
+    .contactGrid{
+      display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch;
+    }
+    .contactBox{display:grid;gap:10px}
+    .contactItem{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+    }
+    .icon{
+      width:34px;height:34px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(125,211,252,.12);
+      border:1px solid rgba(125,211,252,.22);
+      flex:0 0 auto;
+    }
+    .qr{
+      display:grid;place-items:center;gap:10px;
+      padding:18px;border-radius:var(--radius);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .qr img{
+      width:min(320px, 100%);
+      height:auto;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      background:#fff;
+    }
+    footer{padding:20px 0 30px;color:var(--muted2);font-size:13px}
+
+    @media (max-width: 1000px){
+      .cols3{grid-template-columns:1fr}
+    }
+    @media (max-width: 920px){
+      .heroGrid,.split,.grid2,.contactGrid{grid-template-columns:1fr}
+      .h1{font-size:38px}
+      .topbar{padding-bottom:22px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SABA ESP",
+    "url":"https://sabaesp.com",
+    "email":"info@sabaesp.com",
+    "sameAs":["https://www.linkedin.com/company/sabaesp"],
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Mannheim",
+      "addressCountry":"DE"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo"><img src="assets/logo.png" alt="SABA ESP logo" /></div><div>SABA ESP</div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#vfd">VFD Repair</a>
+          <a href="#engineering">Engineering Support</a>
+          <a href="#reach">Geographic Reach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="heroGrid">
+        <div>
+          <div class="tagrow">
+            <span class="pill">Germany-based • Senior engineers only</span>
+            <span class="pill">ESP Field Services</span>
+            <span class="pill">Multi-OEM VFD Repair</span>
+          </div>
+
+          <h1 class="h1">German-Led ESP Field Services<br/> & Advanced VFD Repair</h1>
+          <p class="sub">
+            SABA ESP delivers high-level ESP field services, diagnostics, and VFD repair for oil & gas operators worldwide—
+            with German engineering discipline, rigorous QA/QC, and fully traceable technical decisions.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn" href="#contact">Contact us</a>
+            <a class="btn secondary" href="#why">Why SABA ESP</a>
+          </div>
+
+          <p class="note">
+            Focus regions: Middle East, North Africa, selected CIS, and Europe.
+          </p>
+        </div>
+
+        <aside class="heroCard" aria-label="Highlights">
+          <h3 style="margin-top:0">Key highlights</h3>
+          <div class="kpi">
+            <div><span class="dot"></span><span>Senior-engineer-only model — no junior staffing.</span></div>
+            <div><span class="dot"></span><span>15+ years of ESP field experience and deep technical know-how.</span></div>
+            <div><span class="dot"></span><span>Multi-OEM VFD service: SLB, Baker Hughes, Triol, Novomet, Borets, Toshiba, and others.</span></div>
+            <div><span class="dot"></span><span>Restoring existing VFDs can provide up to <b>70% cost savings</b> vs. new units.</span></div>
+          </div>
+          <p class="note">Onsite field support and remote technical assistance available.</p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Company Overview</h2>
+          <p>
+            SABA ESP is a Germany-based engineering company delivering high-level ESP field services, diagnostics,
+            and advanced VFD repair for oil & gas operators worldwide.
+          </p>
+          <p>
+            We bring German engineering discipline, rigor, and traceability into every project—ensuring safe, reliable,
+            and efficient ESP performance.
+          </p>
+          <p class="small">Based in Mannheim, Germany.</p>
+        </div>
+
+        <div class="card">
+          <h3>German Engineering Advantage</h3>
+          <ul>
+            <li>Precision and accuracy in diagnostics and execution</li>
+            <li>Structured analysis with fully traceable decision-making</li>
+            <li>Rigorous QA/QC at every workflow stage</li>
+            <li>Transparent technical communication and reporting</li>
+            <li>Safety-first mindset aligned with international standards</li>
+            <li>Lifecycle thinking for long-term ESP reliability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="wrap grid2">
+        <div class="card">
+          <h2>Senior Engineers Only</h2>
+          <p>
+            SABA ESP operates with a senior-engineer-only model. Every specialist has 15+ years of ESP experience and
+            a strong background with global leaders such as Schlumberger and Baker Hughes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Team strengths</h3>
+          <ul>
+            <li>Advanced training in power electronics and VFD repair</li>
+            <li>Hundreds of wells commissioned and optimized</li>
+            <li>International field exposure (MEA, Europe, CIS)</li>
+            <li>Strong diagnostic and root-cause analysis capabilities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2>ESP Field Services</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Field scope</h3>
+            <ul>
+              <li>Installation & commissioning</li>
+              <li>Testing (no-load & load)</li>
+              <li>VFD programming / firmware</li>
+              <li>ESP operating mode optimization</li>
+              <li>Well performance monitoring</li>
+              <li>Troubleshooting</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Reliability focus</h3>
+            <ul>
+              <li>Failure analysis and root-cause investigation (RCA)</li>
+              <li>Engineering-grade technical reporting and recommendations</li>
+              <li>Goal: maximize ESP run life and reduce intervention frequency</li>
+              <li>Stable production at minimum operating cost</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vfd">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <h2>Advanced VFD Engineering, Repair & Diagnostics</h2>
+            <p>
+              We service, diagnose, and restore VFDs from multiple OEMs, including Schlumberger, Baker Hughes, Triol,
+              Novomet, Borets, Toshiba, and other major OEMs.
+            </p>
+            <div class="callout">
+              <b>Cost & lead time advantage:</b> Restoring an existing VFD can deliver up to <b>70% cost savings</b> and
+              significantly reduce lead time compared to procuring new units.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Core capabilities</h3>
+            <ul>
+              <li>Power electronics & HV diagnostics (IGBT / power modules under load)</li>
+              <li>Firmware restoration, MCU/DSP programming, logic & protection validation</li>
+              <li>Fieldbus/Modbus/Profibus communication recovery</li>
+              <li>Cooling/thermal management and EMI/RFI mitigation</li>
+              <li>Load simulation testing and waveform/harmonics analysis</li>
+              <li>PCB-level repair and component replacement (where feasible)</li>
+              <li>Failure analysis (RCA) & preventive action reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="engineering">
+      <div class="wrap">
+        <h2>Engineering & Application Support</h2>
+        <div class="cols3">
+          <div class="card">
+            <h3>System design</h3>
+            <ul>
+              <li>ESP sizing and equipment selection (reservoir & inflow based)</li>
+              <li>Operating envelope definition and performance prediction</li>
+              <li>Motor/protector thermal & mechanical loading analysis</li>
+              <li>Cable routing and surface interface review</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Integration assurance</h3>
+            <ul>
+              <li>Full ESP completion design review</li>
+              <li>Compatibility verification with downhole & surface systems</li>
+              <li>Failure-mode sensitivity and risk evaluation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Optimization & training</h3>
+            <ul>
+              <li>Detailed well & ESP performance analysis</li>
+              <li>Operating mode optimization strategy</li>
+              <li>Corrective and preventive action development</li>
+              <li>Reports, presentations, and training programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <h2>Why Clients Choose SABA ESP</h2>
+        <div class="grid2">
+          <div class="card">
+            <ul>
+              <li>Germany-based company — high trust and engineering standards</li>
+              <li>Senior engineers only — no junior or inexperienced staff</li>
+              <li>Proven SLB / Baker Hughes field and engineering background</li>
+              <li>Deep ESP diagnostics and RCA expertise</li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Unique multi-brand VFD repair and diagnostics capability</li>
+              <li>Fast response and flexible engagement models</li>
+              <li>Full transparency: engineering-grade reporting and traceable decisions</li>
+              <li>Cost-effective solutions with measurable reliability improvements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reach">
+      <div class="wrap grid2">
+        <div class="card">
+          <h2>Geographic Reach</h2>
+          <p>SABA ESP operates globally with a focus on the Middle East, North Africa, selected CIS, and European markets.</p>
+        </div>
+        <div class="card">
+          <h3>Regions</h3>
+          <ul>
+            <li><b>Europe:</b> Germany / EU</li>
+            <li><b>Middle East:</b> Oman, UAE, Iraq, Kuwait</li>
+            <li><b>North Africa:</b> Tunisia, Algeria, Libya</li>
+            <li><b>CIS:</b> Kazakhstan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="contactGrid">
+          <div class="contactBox">
+            <div class="contactItem">
+              <div class="icon">✉️</div>
+              <div>
+                <div><b>Email</b></div>
+                <div class="muted"><a href="mailto:info@sabaesp.com">info@sabaesp.com</a></div>
+              </div>
+            </div>
+            <div class="contactItem">
+              <div class="icon">💼</div>
+              <div>
+                <div><b>LinkedIn</b></div>
+                <div class="muted"><a href="https://www.linkedin.com/company/sabaesp" target="_blank" rel="noopener">linkedin.com/company/sabaesp</a></div>
+              </div>
+            </div>
+            <div class="contactItem">
+              <div class="icon">💬</div>
+              <div>
+                <div><b>WhatsApp Business</b></div>
+                <div class="muted"><a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a></div>
+                <div class="small">Phone: +49 172 8389094</div>
+              </div>
+            </div>
+            <div class="contactItem">
+              <div class="icon">📍</div>
+              <div>
+                <div><b>Location</b></div>
+                <div class="muted">Mannheim, Germany</div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
+              <a class="btn" href="mailto:info@sabaesp.com">Email us</a>
+              <a class="btn secondary" href="https://wa.me/491728389094" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <aside class="qr" aria-label="WhatsApp QR code">
+            <div class="pill">Scan to start a WhatsApp chat</div>
+            <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
+            <div class="small">Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="y"></span> SABA ESP. All rights reserved.</div>
+      <div class="small">German-led engineering services for ESP performance, reliability, and multi-OEM VFD repair.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
