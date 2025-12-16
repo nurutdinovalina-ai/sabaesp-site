@@ -29,15 +29,27 @@
       --radius:18px;
       --max:1120px;
       }
-      /* Footer (bottom copyright) */
+    .map{
+  margin-top:12px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.map iframe{
+  width:100%;
+  height:220px;
+  border:0;
+  display:block;
+}
+     /* Footer (bottom copyright) */
 .site-footer{
   border-top: 1px solid var(--line);
-}
   text-align: center;
   font-size: 12px;
   color: var(--muted2);
   padding: 30px 20px 40px;
-    }
+}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:#fff;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
     a{color:inherit}
@@ -490,8 +502,7 @@
                 <div class="muted"><a href="https://www.linkedin.com/company/sabaesp" target="_blank" rel="noopener">linkedin.com/company/sabaesp</a></div>
               </div>
             </div>
-            <div class="contactItem">
-              
+             
             <div class="contactItem">
               <div class="icon">📍</div>
               <div>
@@ -500,20 +511,19 @@
               </div>
             </div>
 <div class="map">
-  <iframe
-    src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
-    width="100%"
-    height="220"
-    style="border:0;border-radius:16px;"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <<iframe
+  src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
+  height="220"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
 </div>
-            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
-              <a class="btn" href="mailto:info@sabaesp.com">Email us</a>
-              <a class="btn secondary" href="https://wa.me/491728389094" target="_blank" rel="noopener">Chat on WhatsApp</a>
-            </div>
-          </div>
+           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
+  <a class="btn" href="mailto:info@sabaesp.com">Email us</a>
+  <a class="btn secondary" href="https://wa.me/491728389094" target="_blank" rel="noopener">
+    Chat on WhatsApp
+  </a>
+</div>
 
           <aside class="qr" aria-label="WhatsApp QR code">
             <div class="pill">Scan to start a WhatsApp chat</div>
