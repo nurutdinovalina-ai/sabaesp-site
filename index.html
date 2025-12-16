@@ -184,38 +184,46 @@
     .contact{
       padding:52px 0 70px;border-bottom:none;
     }
-    .contactGrid{
-      display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch;
-    }
-    .contactBox{display:grid;gap:10px}
-    .contactItem{
-      display:flex;gap:10px;align-items:flex-start;
-      padding:12px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.03);
-    }
-    .icon{
-      width:34px;height:34px;border-radius:12px;
-      display:grid;place-items:center;
-      background:rgba(125,211,252,.12);
-      border:1px solid rgba(125,211,252,.22);
-      flex:0 0 auto;
-    }
-    .qr{
-      display:grid;place-items:center;gap:8px;
-      padding:14px;border-radius:var(--radius);
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .qr img{
-  width: min(220px, 100%);
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 14px 40px rgba(0,0,0,.35);
-  background: #fff;
+    .contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 колонки: карта и QR-код */
+  gap: 24px;
+  align-items: start;
 }
 
+.map iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  border: none;
+  display: block;
+}
+
+.qr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.qr img {
+  width: 80%;
+  max-width: 200px;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr; /* на мобильных устройствах будет 1 колонка */
+  }
+
+  .qr img {
+    width: 100%;
+  }
+}
     footer{padding:20px 0 30px;color:var(--muted2);font-size:13px}
 
     @media (max-width: 1000px){
@@ -490,55 +498,34 @@
 
     <section class="contact" id="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <div class="contactGrid">
-          <div class="contactBox">
-            <div class="contactItem">
-              <div class="icon">✉️</div>
-              <div>
-                <div><b>Email</b></div>
-                <div class="muted"><a href="mailto:info@sabaesp.com">info@sabaesp.com</a></div>
-              </div>
-            </div>
-            <div class="contactItem">
-              <div class="icon">💼</div>
-              <div>
-                <div><b>LinkedIn</b></div>
-                <div class="muted"><a href="https://www.linkedin.com/company/sabaesp" target="_blank" rel="noopener">linkedin.com/company/sabaesp</a></div>
-              </div>
-            </div>
-             
-            <div class="contactItem">
-              <div class="icon">📍</div>
-              <div>
-                <div><b>Location</b></div>
-                <div class="muted">Mannheim, Germany</div>
-              </div>
-            </div>
-<div class="map">
-  <<iframe
-  src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
-  height="220"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
-  <a class="btn" href="mailto:info@sabaesp.com">Email us</a>
-  <a class="btn secondary" href="https://wa.me/491728389094" target="_blank" rel="noopener">
-    Chat on WhatsApp
-  </a>
-</div>
+           <div class="contactItem">
+      <div class="icon">📍</div>
+      <div><b>Location</b></div>
+      <div class="muted">Mannheim, Germany</div>
+    </div>
 
-          <aside class="qr" aria-label="WhatsApp QR code">
-            <div class="pill">Scan to start a WhatsApp chat</div>
-            <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
-            <div class="small">Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a></div>
-          </aside>
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
+        width="100%" height="220px"
+        style="border:0; border-radius:16px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!-- Правый блок: QR-код -->
+  <div class="qr">
+    <div class="pill">Scan to start a WhatsApp chat</div>
+    <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
+    <div class="small">Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a></div>
+  </div>
+</div>
+        <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
+        <div class="small">
+          Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a>
         </div>
-      </div>
-    </section>
+      </aside>
+    </div>
   </main>
+</section>
 
   <footer class="site-footer">
   © <span id="y"></span> SABA ESP. All rights reserved.
