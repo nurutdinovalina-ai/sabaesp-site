@@ -210,15 +210,15 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.qr img {
-  width: 80%;
-  max-width: 200px;
+.qr img{
+  width: 140px;
+  max-width: 140px;
+  height: auto;
 }
 
 @media (max-width: 900px) {
-  .contactGrid {
-    grid-template-columns: 1fr; /* на мобильных устройствах будет 1 колонка */
-  }
+  .qr img { width: 160px; max-width: 160px; }
+}
 
   .qr img {
     width: 100%;
@@ -496,37 +496,44 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="wrap">
-           <div class="contactItem">
-      <div class="icon">📍</div>
-      <div><b>Location</b></div>
-      <div class="muted">Mannheim, Germany</div>
-    </div>
+   <section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contactGrid">
 
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
-        width="100%" height="220px"
-        style="border:0; border-radius:16px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-
-  <!-- Правый блок: QR-код -->
-  <div class="qr">
-    <div class="pill">Scan to start a WhatsApp chat</div>
-    <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
-    <div class="small">Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a></div>
-  </div>
-</div>
-        <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP Germany" />
-        <div class="small">
-          Or open: <a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a>
+      <!-- ЛЕВАЯ КОЛОНКА: Контакты + карта -->
+      <div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>
+            📧 <a href="mailto:info@sabaesp.com">info@sabaesp.com</a><br>
+            🔗 <a href="https://www.linkedin.com/company/sabaesp" target="_blank" rel="noopener">LinkedIn · SABA ESP</a>
+            📍 Mannheim, Germany
+          </p>
         </div>
-      </aside>
-    </div>
-  </main>
-</section>
 
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps?q=Mannheim,Germany&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- ПРАВАЯ КОЛОНКА: QR -->
+      <div class="qr">
+        <div class="pill">WhatsApp</div>
+        <img src="assets/whatsapp-qr.jpg" alt="WhatsApp QR code for SABA ESP" />
+        <div class="small">
+          a href="https://wa.me/491728389094" target="_blank" rel="noopener">wa.me/491728389094</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    </main>
+  
   <footer class="site-footer">
   © <span id="y"></span> SABA ESP. All rights reserved.
 </footer>
