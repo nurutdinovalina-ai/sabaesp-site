@@ -3,62 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="robots" content="index,follow" />
-  <title>SABA Remote Eye | German ESP Monitoring & VFD Diagnostics</title>
-  <meta name="description" content="Professional ESP remote monitoring and VFD diagnostics by SABA ESP Germany. Reduce downtime by 70%." />
+  <title>SABA Remote Eye | ESP Monitoring & VFD Diagnostics</title>
+  <meta name="description" content="Professional ESP remote monitoring by SABA ESP. German engineering standards." />
+  
+  <style>
+    /* Настройки дизайна (CSS) */
+    :root {
+      --primary-blue: #00407a; /* Цвет с твоего логотипа */
+      --dark-bg: #0b1a2a;
+      --accent-yellow: #ffcc00;
+      --text-light: #ffffff;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    /* Шапка с логотипом */
+    header {
+      background: #fff;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo { height: 50px; }
+
+    /* Главный экран */
+    .hero {
+      background: linear-gradient(rgba(11, 26, 42, 0.85), rgba(11, 26, 42, 0.85)), 
+                  url('assets/hero-monitoring.jpg'); /* Ссылка на фото инженера */
+      background-size: cover;
+      background-position: center;
+      color: var(--text-light);
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--accent-yellow); }
+    .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; }
+
+    /* Кнопка WhatsApp */
+    .btn-cta {
+      background: var(--accent-yellow);
+      color: #000;
+      padding: 18px 35px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .btn-cta:hover { transform: scale(1.05); background: #e6b800; }
+
+    /* Блок преимуществ */
+    .features { padding: 60px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-blue); }
+    .card h3 { color: var(--primary-blue); margin-top: 0; }
+
+    footer { background: var(--dark-bg); color: #888; text-align: center; padding: 40px; }
+  </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <strong>SABA ESP</strong>
-      <a href="/">Home</a>
-    </nav>
+    <img src="logo.jpg" alt="SABA ESP Logo" class="logo">
+    <nav><a href="index.html" style="text-decoration:none; color:var(--primary-blue); font-weight:bold;">← Back to Home</a></nav>
   </header>
 
-  <main>
-    <section id="hero">
-      <h1>SABA Remote Eye</h1>
-      <h2>German Engineering Vigilance — 24/7 ESP Reliability [cite: 3, 9, 99]</h2>
-      <p>Reduce your ESP OPEX and prevent up to 70% of VFD failures through expert-led remote monitoring[cite: 72, 73, 105].</p>
-      <button onclick="window.location.href='https://wa.me/491728389094'">Request Demo on WhatsApp</button>
-    </section>
+  <section class="hero">
+    <h1>SABA Remote Eye</h1>
+    <p>We provide high-level ESP performance monitoring and advanced VFD diagnostics for oil & gas operators worldwide. 
+       German engineering means structured analysis and traceable decisions[cite: 8, 9, 22].</p>
+    <a href="https://wa.me/491728389094" class="btn-cta">Request Demo Access</a>
+  </section>
 
-    <hr>
-
-    <section id="problem">
-      <h3>Why SABA Remote Eye?</h3>
-      <p>ESP failures are rarely sudden — most are predictable if proper monitoring is applied[cite: 48, 103].</p>
-      <ul>
-        <li><strong>Stop Guesswork:</strong> Signal-level analysis of IGBT and power modules[cite: 21, 72].</li>
-        <li><strong>Prevent Damage:</strong> Real-time alerts for harmonics and waveform distortion[cite: 72, 130].</li>
-        <li><strong>Expert Oversight:</strong> Decisions made by Senior Engineers (15+ years experience)[cite: 30, 34, 100].</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section id="features">
-      <h3>Our Digital Capabilities</h3>
-      <ul>
-        <li><strong>VFD Health Index:</strong> Monitoring of capacitors, gate drivers, and cooling systems[cite: 15, 72].</li>
-        <li><strong>Advanced RCA:</strong> Deep root-cause analysis based on German QA/QC standards[cite: 9, 23, 48].</li>
-        <li><strong>Remote Optimization:</strong> Fine-tuning of ESP operating modes to maximize run life[cite: 14, 45, 50].</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section id="contact">
-      <h3>Ready to Secure Your Production?</h3>
-      <p>Based in Mannheim, Germany. Supporting CIS, MEA, and Europe[cite: 114, 115, 135].</p>
-      <p>Email: <a href="mailto:info@sabaesp.com">info@sabaesp.com</a> [cite: 135]</p>
-      <p>Phone: +491728389094 [cite: 135]</p>
-    </section>
-  </main>
+  <section class="features">
+    <div class="card">
+      <h3>Predictive Monitoring</h3>
+      <p>Early warning signs weeks before shutdown — if proper monitoring and diagnostics are applied.</p>
+    </div>
+    <div class="card">
+      <h3>VFD Restoration</h3>
+      <p>Reduce costs by up to 70% compared to full replacement while maintaining system reliability.</p>
+    </div>
+    <div class="card">
+      <h3>Senior Expertise</h3>
+      <p>Every specialist has 15+ years of experience with global leaders like Schlumberger and Baker Hughes[cite: 30, 31, 32].</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 SABA ESP. Precision. Performance. Partnership. [cite: 135]</p>
+    <p>SABA ESP Germany | Mannheim, DE [cite: 135]</p>
+    <p>&copy; 2025 SABA ESP. Precision. Performance. Partnership. [cite: 111]</p>
   </footer>
 
 </body>
