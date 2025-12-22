@@ -92,12 +92,15 @@
 
   <nav>
     <a href="index.html"><img src="assets/logo.png" alt="SABA ESP" class="logo"></a>
-    <div class="nav-links">
-      <a href="vfd-repair.html">VFD Repair</a>
-      <a href="esp-eye.html" style="border-bottom: 2px solid var(--accent-yellow);">SABA Eye</a>
-      <a href="esp-field-services.html">Field Services</a>
-      <a href="esp-vfd-training.html">Training</a>
-    </div>
+   <div class="nav-links">
+  <a href="esp-field-services.html">ESP Services</a>
+  <a href="vfd-repair.html">VFD Repair</a>
+  <a href="esp-eye.html" style="border-bottom: 2px solid var(--accent-yellow);">SABA Eye</a>
+  <a href="esp-vfd-training.html">Training</a>
+  <a href="esp-equipment-supply.html">Equipment Supply</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
   </nav>
 
   <section class="hero">
@@ -122,9 +125,12 @@
   </div>
 
   <footer>
-    <p><strong>SABA ESP Germany</strong> | Mannheim, DE</p>
-    <p>&copy; 2025 Precision. Performance. Partnership.</p>
-  </footer>
+  <p><strong>SABA ESP Germany</strong> | Mannheim, DE</p>
+  <p>&copy; <span id="y"></span> Precision. Performance. Partnership.</p>
+</footer>
 
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
