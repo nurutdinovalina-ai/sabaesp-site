@@ -4,104 +4,105 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SABA Remote Eye | ESP Monitoring & VFD Diagnostics</title>
-  <meta name="description" content="Professional ESP remote monitoring by SABA ESP. German engineering standards." />
   
   <style>
-    /* Настройки дизайна (CSS) */
     :root {
-      --primary-blue: #00407a; /* Цвет с твоего логотипа */
+      --primary-blue: #00407a;
       --dark-bg: #0b1a2a;
       --accent-yellow: #ffcc00;
       --text-light: #ffffff;
     }
 
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
 
-    /* Шапка с логотипом */
-    header {
+    /* Навигация */
+    nav {
       background: #fff;
       padding: 15px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .logo { height: 50px; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary-blue);
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
 
-    /* Главный экран */
+    .logo { height: 40px; }
+
+    /* Главный блок */
     .hero {
-      background: linear-gradient(rgba(11, 26, 42, 0.85), rgba(11, 26, 42, 0.85)), 
-                  url('assets/hero-monitoring.jpg'); /* Ссылка на фото инженера */
+      background: linear-gradient(rgba(11,26,42,0.8), rgba(11,26,42,0.8)), url('assets/hero-oilfield.png');
       background-size: cover;
-      background-position: center;
-      color: var(--text-light);
-      padding: 100px 10%;
+      color: white;
+      padding: 80px 10%;
       text-align: center;
     }
 
-    .hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--accent-yellow); }
-    .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; }
+    .hero h1 { color: var(--accent-yellow); font-size: 2.5rem; }
 
-    /* Кнопка WhatsApp */
-    .btn-cta {
+    /* Сетка услуг */
+    .container { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 25px; border-radius: 8px; border-top: 5px solid var(--primary-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+    .btn {
       background: var(--accent-yellow);
+      padding: 15px 30px;
       color: #000;
-      padding: 18px 35px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
       display: inline-block;
-      transition: 0.3s;
+      margin-top: 20px;
     }
-    .btn-cta:hover { transform: scale(1.05); background: #e6b800; }
 
-    /* Блок преимуществ */
-    .features { padding: 60px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-blue); }
-    .card h3 { color: var(--primary-blue); margin-top: 0; }
-
-    footer { background: var(--dark-bg); color: #888; text-align: center; padding: 40px; }
+    footer { background: var(--dark-bg); color: #fff; text-align: center; padding: 30px; margin-top: 50px; }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.jpg" alt="SABA ESP Logo" class="logo">
-    <nav><a href="index.html" style="text-decoration:none; color:var(--primary-blue); font-weight:bold;">← Back to Home</a></nav>
-  </header>
+  <nav>
+    <img src="assets/logo.png" alt="SABA ESP" class="logo">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="vfd-repair.html">VFD Repair</a>
+      <a href="esp-monitoring.html" style="color: var(--accent-yellow);">Remote Eye</a>
+      <a href="esp-field-services.html">Field Services</a>
+    </div>
+  </nav>
 
   <section class="hero">
     <h1>SABA Remote Eye</h1>
-    <p>We provide high-level ESP performance monitoring and advanced VFD diagnostics for oil & gas operators worldwide. 
-       German engineering means structured analysis and traceable decisions[cite: 8, 9, 22].</p>
-    <a href="https://wa.me/491728389094" class="btn-cta">Request Demo Access</a>
+    <p>Professional ESP performance monitoring and VFD diagnostics. <br>German Engineering Discipline in every data point.</p>
+    <a href="https://wa.me/491728389094" class="btn">Get Free Demo</a>
   </section>
 
-  <section class="features">
+  <div class="container">
     <div class="card">
-      <h3>Predictive Monitoring</h3>
-      <p>Early warning signs weeks before shutdown — if proper monitoring and diagnostics are applied.</p>
+      <h3>Real-Time Diagnostics</h3>
+      <p>We analyze VFD signals and ESP parameters to detect degradation before it leads to a motor burnout.</p>
     </div>
     <div class="card">
-      <h3>VFD Restoration</h3>
-      <p>Reduce costs by up to 70% compared to full replacement while maintaining system reliability.</p>
+      <h3>70% Cost Saving</h3>
+      <p>Preventive maintenance and remote expert support reduce your operational expenses significantly.</p>
     </div>
     <div class="card">
-      <h3>Senior Expertise</h3>
-      <p>Every specialist has 15+ years of experience with global leaders like Schlumberger and Baker Hughes[cite: 30, 31, 32].</p>
+      <h3>Global Expertise</h3>
+      <p>Senior-engineer-only model with 15+ years of experience in SLB and Baker Hughes.</p>
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p>SABA ESP Germany | Mannheim, DE [cite: 135]</p>
-    <p>&copy; 2025 SABA ESP. Precision. Performance. Partnership. [cite: 111]</p>
+    <p>SABA ESP Germany | Mannheim</p>
+    <p>Precision. Performance. Partnership.</p>
   </footer>
 
 </body>
